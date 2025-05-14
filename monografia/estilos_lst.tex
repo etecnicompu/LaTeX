@@ -1,0 +1,73 @@
+\usepackage{listings} % código de programación
+\lstdefinelanguage{Bash}{
+    morekeywords={if, then, else, elif, fi, for, while, in, do, done, case, esac, function, exit, echo, read, declare, local, let, eval, exec, return},
+    morekeywords=[2]{cd, ls, rm, mv, cp, chmod, chown, cat, grep, awk, sed, find, xargs, sudo, apt, yum, pacman, systemctl, service},
+    morecomment=[l]{\#}, % Comentarios con #
+    morestring=[b]", % Cadenas entre comillas dobles
+    morestring=[b]', % Cadenas entre comillas simples
+    sensitive=true
+}
+
+\lstdefinelanguage{JavaScript}{
+    keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, throw, try, typeof, var, void, while, with, let, const, async, await, yield, of, from, class, constructor, static, extends, super, this},
+    morekeywords={[2]true,false,null,undefined,NaN,Infinity},
+    morekeywords={[3]console, window, document, Math, JSON, Date, RegExp, Promise, Object, Array, String, Number, Boolean, Symbol, Map, Set, WeakMap, WeakSet},
+    sensitive=true,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    string=[b]",
+    morestring=[b]',
+    morestring=[b]`
+}
+\lstdefinestyle{JavaStyle}{
+    language=Java,
+    basicstyle=\footnotesize\ttfamily,
+    commentstyle=\color{magenta},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false, % Evita mostrar los espacios en strings
+    numbers=none,
+    numberstyle=\tiny\color{blue},
+    frame=single,
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4
+}
+\lstdefinestyle{JavaScriptStyle}{
+    language=JavaScript,
+    basicstyle=\footnotesize\ttfamily, % Fuente pequeña y monoespaciada
+    commentstyle=\color{gray}, % Comentarios en gris
+    keywordstyle=\color{blue}\bfseries, % Palabras clave en azul y en negrita
+    stringstyle=\color{red}, % Cadenas de texto en rojo
+    numberstyle=\tiny\color{blue}, % Numeración en azul y pequeña
+    identifierstyle=\color{black}, % Identificadores en negro
+    showstringspaces=false, % No mostrar espacios en cadenas
+    numbers=left, % Números de línea a la izquierda
+    stepnumber=1, % Mostrar un número en cada línea
+    frame=single, % Marco alrededor del código
+    rulecolor=\color{black}, % Color del marco
+    breaklines=true, % Permitir cortes de línea en código largo
+    breakatwhitespace=true, % Cortar en espacios en blanco
+    tabsize=2, % Tamaño del tabulador
+    morekeywords={let, const, async, await, yield, of, from} % Agregar palabras clave específicas de JavaScript
+}
+\lstdefinestyle{BashStyle}{
+    language=Bash,
+    basicstyle=\ttfamily\footnotesize, % Fuente monoespaciada y tamaño pequeño
+    keywordstyle=\color{cyan}, % Palabras clave en cian
+    keywordstyle=[2]\color{orange}, % Comandos de terminal en naranja
+    commentstyle=\color{gray}, % Comentarios en gris
+    stringstyle=\color{lime}, % Cadenas en verde lima
+    %numberstyle=\color{blue}, % Números en amarillo
+    identifierstyle=\color{white}, % Identificadores en blanco
+    showstringspaces=false, % Ocultar espacios en las cadenas
+    numbers=left, % Numeración de líneas a la izquierda
+    stepnumber=1, % Mostrar número en cada línea
+    frame=single, % Marco alrededor del código
+    rulecolor=\color{gray}, % Color del marco
+    breaklines=true, % Permitir cortes de línea
+    breakatwhitespace=true, % Cortar en espacios en blanco
+    tabsize=2, % Tamaño del tabulador
+    backgroundcolor=\color{black}, % Fondo negro
+}
+\captionsetup[lstlisting]{labelformat=empty}% Configura caption para que no haya numeración en lstlisting
